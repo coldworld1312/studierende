@@ -23,11 +23,19 @@ app.get("/home",function(req,res){
     res.render("home")
 })
 
-//
+//Studenten anzeigen
 app.post("/showstudents",function(req,res){
     const rows=db.prepare("SELECT * FROM students").all();
     console.log(rows);
     res.render("studierende", { studis: rows });
     //res.render("students",{studierende: rows});
+
+});
+
+//Studis hinzufügen
+app.post("/addstudent",function(req,res){
+ 
+    res.render("addstudi");
+   
 
 });
