@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>student hinzugefügt</title>
+    </head>
+    <body>
+        <h1>studi hinzugefügt</h1>
+        <table border="1" >
+            <%for (var i=0;i<studis.length ; i++){ %>
+               <tr>
+                    <td><%= studis[i].id %></td>
+                    <td><%= studis[i].name %></td>
+                    <td><%= studis[i].email %></td>
+                    <td><%= studis[i].semester %></td>
+
+                </tr>
+            <% } %>
+        </table>
+    </body>
+</html>
